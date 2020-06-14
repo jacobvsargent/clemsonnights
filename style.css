@@ -1,0 +1,28 @@
+:root {
+	--cn-purple: #b19cd9;
+	--cn-gray: #666;
+}
+
+
+body {
+  font: 100% sans-serif;
+  margin: 0em;
+  background-color: var(--cn-purple);
+  color: var(--cn-gray);
+}
+
+h1, h2, h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: #3d6dbe;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.8;
+  margin-top: 0em;
+}
