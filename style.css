@@ -26,3 +26,8 @@ p {
   line-height: 1.8;
   margin-top: 0em;
 }
+
+.basic h1, h2 {
+	margin: 5rem;
+	font-weight: bold;
+}
