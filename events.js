@@ -1,65 +1,70 @@
-const specials = [
+const events = [
   {
     business: 'Sushi 365',
-    offer: '$3.65 Sushi Rolls',
+    reason: 'charity/nonprofit',
+    bizevent: 'Eating Sushi off of Cheerleaders',
     day: 'Monday',
+    time: '8 pm - 2 am',
     bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10474020_832999220074748_6215186670951263134_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=Kxu0B2IaBLcAX_kqw7b&_nc_ht=scontent-iad3-1.xx&oh=006fed725592c222e0d7d1e0fb2b9422&oe=5F0C99B1'
   },
   {
     business: 'Itsurwiener',
-    offer: '$6 Shipwrecks',
+    reason: 'ladies\' night',
+    bizevent: 'Wiener Rally',
     day: 'Friday',
-    time: '5-8pm',
+    time: '5-6pm',
     bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/37322716_697868070553651_5167770909007675392_n.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=R9lr3Ff8KV0AX_oFf1p&_nc_ht=scontent-iad3-1.xx&oh=c06437832dea7d9df5282ece1e677ba0&oe=5F0CF2FF'
   },
   {
     business: 'BGR',
-    offer: '$6 Cheeseburger & Fries',
+    reason: 'family outing',
+    bizevent: 'Pretending Burgers are Not Disgusting',
     day: 'Wednesday',
+    time: '8 am - 11 pm',
     bizlogo: 'https://www.tigerstogo.com/png/v_58_i101.png'
   },
 ];
 
 const business = document.querySelector('.business-name');
-const offer = document.querySelector('.offer');
+const bizevent = document.querySelector('.event');
 const day = document.querySelector('.day');
 const time = document.querySelector('.time');
 
-const special = document.getElementById('category-list');
+const eventList = document.getElementById('category-list');
 
-for (i=0; i<specials.length; i++) {
-  const item = specials[i];
+for (i=0; i<events.length; i++) {
+  const item = events[i];
 
-    newSpecial = document.createElement("DIV");
-    special.appendChild(newSpecial);
-    newSpecial.classList += "new-special";
+    newEvent = document.createElement("DIV");
+    eventList.appendChild(newEvent);
+    newEvent.classList += "new-event";
 
     if (item.hasOwnProperty('business')) {
       newAttr = document.createElement("P");
-      newSpecial.appendChild(newAttr);
-      newAttr.textContent = specials[i].business;
+      newEvent.appendChild(newAttr);
+      newAttr.textContent = events[i].business;
       newAttr.classList += "business-name";
     }
 
     image = document.createElement("DIV");
-    newSpecial.appendChild(image);
+    newEvent.appendChild(image);
     image.classList += "logocontainer";
 
     if (item.hasOwnProperty('bizlogo')) {
       newImg = document.createElement("IMG");
       image.appendChild(newImg);
-      newImg.src = specials[i].bizlogo;
+      newImg.src = events[i].bizlogo;
       newImg.classList += "bizlogo";
     }
 
     dayTime = document.createElement("DIV");
-    newSpecial.appendChild(dayTime);
+    newEvent.appendChild(dayTime);
     dayTime.classList += "daytime";
 
       if (item.hasOwnProperty('day')) {
         newAttr = document.createElement("P");
         dayTime.appendChild(newAttr);
-        newAttr.textContent = specials[i].day;
+        newAttr.textContent = events[i].day;
         newAttr.classList += "day";
 
       }
@@ -67,20 +72,31 @@ for (i=0; i<specials.length; i++) {
       if (item.hasOwnProperty('time')) {
         newAttr = document.createElement("P");
         dayTime.appendChild(newAttr);
-        newAttr.textContent = specials[i].time;
+        newAttr.textContent = events[i].time;
         newAttr.classList += "time";
 
       }
 
-    if (item.hasOwnProperty('offer')) {
+    reasonevent = document.createElement("DIV");
+    newEvent.appendChild(reasonevent);
+    reasonevent.classList += "reason-event";
+
+    if (item.hasOwnProperty('reason')) {
       newAttr = document.createElement("P");
-      newSpecial.appendChild(newAttr);
-      newAttr.textContent = specials[i].offer;
-      newAttr.classList += "offer";
+      reasonevent.appendChild(newAttr);
+      newAttr.textContent = events[i].reason;
+      newAttr.classList += "reason";
+    }
+
+    if (item.hasOwnProperty('bizevent')) {
+      newAttr = document.createElement("P");
+      reasonevent.appendChild(newAttr);
+      newAttr.textContent = events[i].bizevent;
+      newAttr.classList += "bizevent";
 
     }
 
 
 };
 
-document.getElementById("specialsbutton").style.backgroundColor = "rgb(212, 202, 220, .5)";
+document.getElementById("eventsbutton").style.backgroundColor = "rgb(212, 202, 220, .5)";
