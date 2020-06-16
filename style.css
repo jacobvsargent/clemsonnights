@@ -175,6 +175,7 @@ p {
 .bizlogo {
   width: 100%;
   overflow: hidden;
+  opacity: 75%;
 }
 
 #header {

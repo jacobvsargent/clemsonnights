@@ -98,5 +98,3 @@ for (i=0; i<events.length; i++) {
 
 
 };
-
-document.getElementById("eventsbutton").style.backgroundColor = "rgb(212, 202, 220, .5)";

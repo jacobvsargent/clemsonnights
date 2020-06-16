@@ -82,5 +82,3 @@ for (i=0; i<specials.length; i++) {
 
 
 };
-
-document.getElementById("specialsbutton").style.backgroundColor = "rgb(212, 202, 220, .5)";
