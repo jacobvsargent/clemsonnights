@@ -1,6 +1,8 @@
 :root {
-	--cn-purple: #b19cd9;
+	--cn-purple: #452743;
 	--cn-gray: #666;
+  --cn-lightpurp: #d4cadc;
+  --cn-orange: #e27864;
 }
 
 
@@ -9,7 +11,7 @@ body {
   font-family: 'Nobel', sans-serif;
   margin: 0em;
   background-color: var(--cn-purple);
-  color: var(--cn-gray);
+  color: var(--cn-lightpurp);
 }
 
 h1, h2, h3 {
@@ -51,9 +53,17 @@ p {
   z-index: 2;
 }
 
+#logo {
+  width: 82%;
+  margin-left: 7.5%;
+  margin-top: 5%;
+  position: absolute;
+  z-index: 2;
+}
+
 #logobg {
-  background-color: white;
-  height: 100px;
+  background-image: linear-gradient(transparent, var(--cn-orange));
+  height: 200px;
   width: 95%;
   margin: auto;
   opacity: 25%;
@@ -81,6 +91,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: transparent;
+  color: var(--cn-purple);
 }
 
 .category {
@@ -88,7 +99,7 @@ p {
   flex: 30%;
   margin-left: 5px;
   box-sizing: border-box;
-  background-color: white;
+  background-color: var(--cn-lightpurp);
   height: 30px;
   text-align: center;
 }
@@ -101,24 +112,43 @@ p {
 }
 
 #category-list > div {
-  height: 100px;
+  min-height: 100px;
   background-color: rgb(255, 255, 255, .25);
   padding: 15px 20px;
   box-sizing: border-box;
 }
 #category-list > div:nth-child(2n) {
-  background-color: rgb(255, 255, 255, .5);
+  background-color: rgb(255, 255, 255, .75);
+  color: var(--cn-purple);
 }
 
 #category-list p {
-  line-height: .25;
+  line-height: .1;
   font-size: 1.15em;
 }
 
 #category-list .offer {
-  text-align: center;
+  margin-left: 30%;
   font-weight: 600;
   font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.logocontainer {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.bizlogo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.daytime {
+  position: relative;
+  bottom: 1em;
 }
 
 .daytime p {
@@ -134,6 +164,31 @@ p {
   font-weight: 600;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 600px) {
 
+  #header #settingsicon {
+    display: none;
+  }
+
+  #logo {
+    width: 20%;
+    margin-top: 2%;
+  }
+
+  .logocontainer {
+    width: 75px;
+  }
+
+  #category-list .business-name {
+    margin-left: 30%;
+    margin-top: 15px;
+    font-size: 1.3em;
+  }
+
+  #category-list .offer {
+    margin-left: 30%;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 1.5em;
+  }
 }
