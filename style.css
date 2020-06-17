@@ -69,17 +69,19 @@ p {
 }
 
 #logobg {
-  height: 200px;
-  width: 95%;
+  height: 1000px;
+  width: 100%;
   position: absolute;
   display: block;
-  margin: 2.5%;
+  /*margin: 2.5%;*/
   overflow: hidden;
+  z-index: 1;
+
 }
 
 .logobg:nth-child(1) {
   background-image: linear-gradient(transparent, var(--cn-orange));
-  height: 200px;
+  height: 100%;
   width: 100%;
   margin: auto;
   opacity: 50%;
@@ -90,7 +92,7 @@ p {
 .logobg:nth-child(2) {
   background-image: radial-gradient(circle at 50px 50px, var(--cn-lightpurp), transparent 35%);
   mix-blend-mode: screen;
-  height: 200px;
+  height: 100%;
   width: 100%;
   margin: auto;
   opacity: 35%;
@@ -101,12 +103,13 @@ p {
 #category-menu {
   max-width: 85%;
   margin: auto;
-  margin-top: 10px;
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: transparent;
   color: var(--cn-purple);
+  z-index: 2;
 }
 
 .category {
@@ -127,6 +130,8 @@ p {
   max-width: 85%;
   margin: auto;
   margin-top: 20px;
+  z-index: 2;
+  position: relative;
 }
 
 #category-list > div {
@@ -179,7 +184,7 @@ p {
 }
 
 #header {
-  height: 215px;
+  height: 185px;
 }
 
 .daytime {
