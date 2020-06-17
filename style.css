@@ -55,13 +55,44 @@ p {
   width: 50px;
   flex: 40%;
   display: block;
-  z-index: 3;
   cursor: pointer;
-
 }
 
 #naviconbar i {
   font-size: 24pt;
+}
+
+#sidenav {
+  position: absolute;
+  top: 50;
+  opacity: 0;
+  margin-left: 3%;
+  pointer-events: none;
+  width: 85%;
+  z-index: 4;
+  transition: opacity .5s ease-out;
+}
+
+#sidenavoverlay {
+  width: 100%;
+  background-color: rgb(212, 202, 220, .85);
+  height: 1000px;
+  opacity: 0%;
+  z-index: 3;
+  pointer-events: none;
+  top: 0;
+  position: absolute;
+
+}
+
+#sidenav ul li {
+  background-color: var(--cn-lightpurp);
+  padding: 10px 20px;
+  font-size: 14pt;
+  color: var(--cn-purple);
+  list-style-type: none;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 #logo {
@@ -209,6 +240,15 @@ p {
   font-weight: 600;
 }
 
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 500;
+}
 
 @media (min-width: 800px) {
 
@@ -220,7 +260,20 @@ p {
     width: 20%;
     margin-top: 5%;
   }
-
+  #sidenav ul {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+  }
+  #sidenav ul a {
+    padding: 5px 10px;
+  }
+  #sidenav {
+    opacity: 1;
+    pointer-events: auto;
+    top: 10;
+    position: absolute;
+  }
   .logocontainer {
     width: 100px;
     margin-left: 100px;
@@ -258,5 +311,10 @@ p {
     font-size: 1.5em;
     position: relative;
     bottom: 30px;
+  }
+
+  .container {
+    width: 50%;
+    margin-left: 15%;
   }
 }
