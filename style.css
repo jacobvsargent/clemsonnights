@@ -42,10 +42,12 @@ p {
 #naviconbar {
   max-width: 25%;
   margin: 15px;
-  float: right;
+  right: 0;
+  z-index: 3;
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
 }
 
 #naviconbar .navicon {
@@ -53,7 +55,9 @@ p {
   width: 50px;
   flex: 40%;
   display: block;
-  z-index: 2;
+  z-index: 3;
+  cursor: pointer;
+
 }
 
 #naviconbar i {
