@@ -1,6 +1,8 @@
 :root {
-	--cn-purple: #b19cd9;
+	--cn-purple: #452743;
 	--cn-gray: #666;
+  --cn-lightpurp: #d4cadc;
+  --cn-orange: #e27864;
 }
 
 
@@ -9,7 +11,7 @@ body {
   font-family: 'Nobel', sans-serif;
   margin: 0em;
   background-color: var(--cn-purple);
-  color: var(--cn-gray);
+  color: var(--cn-lightpurp);
 }
 
 h1, h2, h3 {
@@ -37,50 +39,77 @@ p {
 	font-weight: bold;
 }
 
-#header {
-  width: 100%;
-  margin-bottom: 15px;
+#naviconbar {
+  max-width: 25%;
+  margin: 15px;
+  float: right;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#header #settingsicon {
+#naviconbar .navicon {
   height: 50px;
   width: 50px;
-  margin: 10px;
+  flex: 40%;
   display: block;
-  right: 0;
+  z-index: 2;
+}
+
+#naviconbar i {
+  font-size: 24pt;
+}
+
+#logo {
+  width: 300px;
+  margin-left: 7.5%;
+  margin-top: 5%;
+  position: absolute;
   z-index: 2;
 }
 
 #logobg {
-  background-color: white;
-  height: 100px;
-  width: 95%;
-  margin: auto;
-  opacity: 25%;
-  z-index: 1;
+  height: 1000px;
+  width: 100%;
+  position: absolute;
   display: block;
+  /*margin: 2.5%;*/
+  overflow: hidden;
+  z-index: 1;
+
 }
 
-#settingsicon i {
-  font-size: 36pt;
+.logobg:nth-child(1) {
+  background-image: linear-gradient(transparent, var(--cn-orange));
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  opacity: 50%;
+  z-index: 1;
+  position: absolute;
 }
 
-#settingsicon {
-  transition: 1s ease;
-}
-
-#settingsicon:hover {
-  transform: rotate(400deg);
-  transition: .5s ease-out;
+.logobg:nth-child(2) {
+  background-image: radial-gradient(circle at 50px 50px, var(--cn-lightpurp), transparent 35%);
+  mix-blend-mode: screen;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  opacity: 35%;
+  z-index: 1;
+  position: absolute;
 }
 
 #category-menu {
   max-width: 85%;
   margin: auto;
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: space-between;
   background-color: transparent;
+  color: var(--cn-purple);
+  z-index: 2;
 }
 
 .category {
@@ -88,37 +117,79 @@ p {
   flex: 30%;
   margin-left: 5px;
   box-sizing: border-box;
-  background-color: white;
+  background-color: rgb(212, 202, 220, .25);
   height: 30px;
   text-align: center;
 }
 
+.category a {
+  color: var(--cn-purple);
+}
 
 #category-list {
   max-width: 85%;
   margin: auto;
   margin-top: 20px;
+  z-index: 2;
+  position: relative;
 }
 
 #category-list > div {
-  height: 100px;
+  min-height: 115px;
   background-color: rgb(255, 255, 255, .25);
   padding: 15px 20px;
   box-sizing: border-box;
 }
 #category-list > div:nth-child(2n) {
-  background-color: rgb(255, 255, 255, .5);
+  background-color: rgb(255, 255, 255, .75);
+  color: var(--cn-purple);
 }
 
 #category-list p {
-  line-height: .25;
+  line-height: .1;
   font-size: 1.15em;
 }
 
-#category-list .offer {
-  text-align: center;
+#category-list .offer, .reason-event {
+  margin-left: 30%;
+}
+
+#category-list .reason-event p {
   font-weight: 600;
-  font-size: 1.4em;
+  font-size: 1.25em;
+  line-height: 1em;
+}
+
+#category-list .reason-event  {
+  position: relative;
+  bottom: 15px;
+}
+
+.reason {
+  opacity: 75% !important;
+  font-weight: 200  !important;
+}
+
+.logocontainer {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.bizlogo {
+  width: 100%;
+  overflow: hidden;
+  opacity: 75%;
+}
+
+#header {
+  height: 185px;
+}
+
+.daytime {
+  position: relative;
+  bottom: 1em;
 }
 
 .daytime p {
@@ -129,11 +200,59 @@ p {
   text-align: right;
 }
 
-#category-list .time {
-  font-size: .85em;
+#category-list .time, .reason {
+  font-size: .85em !important;
   font-weight: 600;
 }
 
-@media (max-width: 480px) {
 
+@media (min-width: 800px) {
+
+  #naviconbar {
+    display: none;
+  }
+
+  #logo {
+    width: 20%;
+    margin-top: 5%;
+  }
+
+  .logocontainer {
+    width: 100px;
+    margin-left: 100px;
+  }
+
+  .category {
+    font-size: 1.5em;
+    height: auto;
+    padding: 15px;
+    padding-bottom: 0;
+  }
+
+  #category-list .business-name {
+    margin-left: 30%;
+    margin-top: 15px;
+    font-size: 1.3em;
+  }
+
+  #category-list .offer {
+    margin-left: 30%;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+  #category-list .daytime {
+    font-size: 1.5em;
+  }
+
+  #header {
+    height: 250px;
+  }
+
+  #category-list .reason-event  {
+    font-size: 1.5em;
+    position: relative;
+    bottom: 30px;
+  }
 }

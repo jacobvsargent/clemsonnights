@@ -1,4 +1,4 @@
-/*import items from "./all.js"; */
+/*import items from "./all.js";*/
 
 const items = [
   {
@@ -53,29 +53,29 @@ const items = [
 ];
 
 const business = document.querySelector('.business-name');
-const offer = document.querySelector('.offer');
+const bizevent = document.querySelector('.event');
 const day = document.querySelector('.day');
 const time = document.querySelector('.time');
 
-const special = document.getElementById('category-list');
+const eventList = document.getElementById('category-list');
 
 for (i=0; i<items.length; i++) {
-if (items[i].type === 'special') {
+  if (items[i].type === 'event') {
   const item = items[i];
 
-    newSpecial = document.createElement("DIV");
-    special.appendChild(newSpecial);
-    newSpecial.classList += "new-special";
+    newEvent = document.createElement("DIV");
+    eventList.appendChild(newEvent);
+    newEvent.classList += "new-event";
 
     if (item.hasOwnProperty('business')) {
       newAttr = document.createElement("P");
-      newSpecial.appendChild(newAttr);
+      newEvent.appendChild(newAttr);
       newAttr.textContent = items[i].business;
       newAttr.classList += "business-name";
     }
 
     image = document.createElement("DIV");
-    newSpecial.appendChild(image);
+    newEvent.appendChild(image);
     image.classList += "logocontainer";
 
     if (item.hasOwnProperty('bizlogo')) {
@@ -86,7 +86,7 @@ if (items[i].type === 'special') {
     }
 
     dayTime = document.createElement("DIV");
-    newSpecial.appendChild(dayTime);
+    newEvent.appendChild(dayTime);
     dayTime.classList += "daytime";
 
       if (item.hasOwnProperty('day')) {
@@ -105,13 +105,24 @@ if (items[i].type === 'special') {
 
       }
 
-    if (item.hasOwnProperty('offer')) {
+    reasonevent = document.createElement("DIV");
+    newEvent.appendChild(reasonevent);
+    reasonevent.classList += "reason-event";
+
+    if (item.hasOwnProperty('reason')) {
       newAttr = document.createElement("P");
-      newSpecial.appendChild(newAttr);
-      newAttr.textContent = items[i].offer;
-      newAttr.classList += "offer";
+      reasonevent.appendChild(newAttr);
+      newAttr.textContent = items[i].reason;
+      newAttr.classList += "reason";
+    }
+
+    if (item.hasOwnProperty('bizevent')) {
+      newAttr = document.createElement("P");
+      reasonevent.appendChild(newAttr);
+      newAttr.textContent = items[i].bizevent;
+      newAttr.classList += "bizevent";
 
     }
-  }
 
+}
 };
