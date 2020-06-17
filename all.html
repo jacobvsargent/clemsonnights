@@ -31,9 +31,6 @@
     <div class="navicon">
       <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-    <div class="navicon">
-      <i class="fas fa-cog"></i>
-    </div>
   </div>
   <div>
     <div id="logo">
@@ -45,6 +42,32 @@
   </div>
   </div>
 </div>
+
+<script>
+  const navicon = document.querySelector('.navicon').querySelector("I");
+  const navbutton = document.getElementById("naviconbar");
+  const sidenav = document.getElementById("sidenav");
+  const sidenavoverlay = document.getElementById("sidenavoverlay");
+  function showNav() {
+    sidenav.style.opacity = '1';
+    sidenav.style.pointerEvents = 'auto';
+    sidenavoverlay.style.opacity = '.5';
+    sidenavoverlay.style.pointerEvents = 'auto';
+    navicon.classList = 'fa fa-times';
+  }
+  function hideNav() {
+    sidenav.style.opacity = '0';
+    sidenav.style.pointerEvents = 'none';
+    sidenavoverlay.style.opacity = '0';
+    sidenavoverlay.style.pointerEvents = 'none';
+    navicon.classList = 'fa fa-bars';
+  }
+
+  navbutton.addEventListener("click", showNav);
+
+  sidenavoverlay.addEventListener("click", hideNav);
+
+</script>
 
 <div id="category-menu">
   <div id = "specialsbutton" class='category'><a href="index.html"><p>Specials</p></a></div>
