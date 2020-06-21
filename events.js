@@ -15,12 +15,13 @@ const items = [
     offer: '$11.95 All You Can Eat Wings',
     day: 'Monday',
     time: '5 pm - 9pm',
-    bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10474020_832999220074748_6215186670951263134_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=Kxu0B2IaBLcAX_kqw7b&_nc_ht=scontent-iad3-1.xx&oh=006fed725592c222e0d7d1e0fb2b9422&oe=5F0C99B1'
+    bizlogo: 'https://www.tigerstogo.com/v_58_i381m.png'
   },
   {
     type: 'special',
     business: 'Sushi 365',
     offer: 'Half Price Wine Bottles',
+    time: 'All Day',
     day: 'Wednesday',
     bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10474020_832999220074748_6215186670951263134_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=Kxu0B2IaBLcAX_kqw7b&_nc_ht=scontent-iad3-1.xx&oh=006fed725592c222e0d7d1e0fb2b9422&oe=5F0C99B1'
   },
@@ -43,7 +44,7 @@ const items = [
     bizevent: 'Karaoke @ TDs',
     day: 'Tuesday',
     time: '10 pm',
-    bizlogo: 'https://www.tigerstogo.com/png/v_58_i101.png'
+    bizlogo: 'https://www.tigerstogo.com/v_58_i381m.png'
   },
   {
     type: 'event',
