@@ -75,7 +75,7 @@ const time = document.querySelector('.time');
 const special = document.getElementById('category-list');
 
 for (i=0; i<items.length; i++) {
-if (items[i].type === 'special' and items[i].alc === true) {
+if (items[i].type === 'special' && items[i].alc == true) {
   const item = items[i];
 
     newSpecial = document.createElement("DIV");
