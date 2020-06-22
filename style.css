@@ -181,7 +181,6 @@ p {
 }
 
 #category-list p {
-  line-height: .1;
   font-size: 1.15em;
 }
 
@@ -202,7 +201,7 @@ p {
 
 .reason {
   opacity: 75% !important;
-  font-weight: 200  !important;
+  font-weight: 400  !important;
 }
 
 .logocontainer {
