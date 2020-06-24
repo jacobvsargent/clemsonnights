@@ -5,6 +5,9 @@
   --cn-orange: #e27864;
 }
 
+html, body {
+  height: 100%;
+}
 
 body {
   font: 100% sans-serif;
@@ -104,9 +107,8 @@ p {
 }
 
 #logobg {
-  height: 1000px;
-  width: 100%;
   position: absolute;
+  width: 100%;
   display: block;
   /*margin: 2.5%;*/
   overflow: hidden;
@@ -254,7 +256,6 @@ h3 {
   #naviconbar {
     display: none;
   }
-
   #logo {
     width: 20%;
     margin-top: 5%;
