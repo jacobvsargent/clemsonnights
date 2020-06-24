@@ -33,7 +33,7 @@ const items = [
     time: '4-8pm',
     bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/37322716_697868070553651_5167770909007675392_n.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=R9lr3Ff8KV0AX_oFf1p&_nc_ht=scontent-iad3-1.xx&oh=c06437832dea7d9df5282ece1e677ba0&oe=5F0CF2FF'
   },
-  
+
 
   /* DIVIDE BETWEEN SPECIALS AND EVENTS */
 
@@ -137,6 +137,12 @@ for (i=0; i<items.length; i++) {
       newAttr.classList += "bizevent";
 
     }
-
+    var body = document.body;
+         html = document.documentElement;
+   var big = Math.max(body.scrollHeight, body.offsetHeight,
+                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+   var hei = big;
+   const logobg = document.querySelector('#logobg');
+   logobg.style.height = hei + 'px';
 }
 };

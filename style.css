@@ -246,6 +246,14 @@ p {
   margin: auto;
 }
 
+.container p {
+  font-size: 1.3em;
+}
+
+.container h3 {
+  font-size: 2.5em;
+}
+
 h3 {
   font-size: 1.75em;
   font-weight: 500;
