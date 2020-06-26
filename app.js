@@ -7,7 +7,6 @@ const items = [
     offer: '$3.65 Sushi Rolls',
     day: 'Monday',
     time: '5 pm - 10pm',
-    bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10474020_832999220074748_6215186670951263134_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=Kxu0B2IaBLcAX_kqw7b&_nc_ht=scontent-iad3-1.xx&oh=006fed725592c222e0d7d1e0fb2b9422&oe=5F0C99B1'
   },
   {
     type: 'special',
@@ -15,7 +14,6 @@ const items = [
     offer: '$11.95 All You Can Eat Wings',
     day: 'Monday',
     time: '5 pm - 9pm',
-    bizlogo: 'https://www.tigerstogo.com/v_58_i381m.png'
   },
   {
     type: 'special',
@@ -23,7 +21,6 @@ const items = [
     offer: 'Half Price Wine Bottles',
     time: 'All Day',
     day: 'Wednesday',
-    bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10474020_832999220074748_6215186670951263134_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=Kxu0B2IaBLcAX_kqw7b&_nc_ht=scontent-iad3-1.xx&oh=006fed725592c222e0d7d1e0fb2b9422&oe=5F0C99B1'
   },
   {
     type: 'special',
@@ -44,7 +41,6 @@ const items = [
     bizevent: 'Karaoke @ TDs',
     day: 'Tuesday',
     time: '10 pm',
-    bizlogo: 'https://www.tigerstogo.com/v_58_i381m.png'
   },
   {
     type: 'event',
@@ -53,7 +49,6 @@ const items = [
     bizevent: 'Trivia Night (Pub Trivia)',
     day: 'Wednesday',
     time: '7:30 pm',
-    bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10474020_832999220074748_6215186670951263134_n.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=Kxu0B2IaBLcAX_kqw7b&_nc_ht=scontent-iad3-1.xx&oh=006fed725592c222e0d7d1e0fb2b9422&oe=5F0C99B1'
   },
   {
     type: 'event',
@@ -97,6 +92,19 @@ if (items[i].type === 'special') {
       image.appendChild(newImg);
       newImg.src = items[i].bizlogo;
       newImg.classList += "bizlogo";
+    } else {
+      placeholder = document.createElement("DIV");
+      image.appendChild(placeholder);
+      placeholder.classList += "placeholder";
+      initial = document.createElement("P");
+      initial2 = document.createElement("P");
+      placeholder.appendChild(initial);
+      placeholder.appendChild(initial2);
+      bizname = items[i].business;
+      initial.textContent = bizname.charAt(0);
+      initial2.textContent = bizname;
+      initial2.classList += "initial2";
+      console.log(initial);
     }
 
     dayTime = document.createElement("DIV");
