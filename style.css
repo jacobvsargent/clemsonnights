@@ -187,7 +187,7 @@ p {
 }
 
 #category-list .offer, .reason-event {
-  margin-left: 30%;
+  margin-left: 35%;
 }
 
 #category-list .reason-event p {
@@ -207,8 +207,8 @@ p {
 }
 
 .logocontainer {
-  width: 65px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   position: absolute;
   border-radius: 100%;
   display: flex;
@@ -224,14 +224,13 @@ p {
 
 .placeholder {
   width: 100%;
-  height: 100px;
+  height: 75px;
   color: var(--cn-lightpurp);
   background-color: var(--cn-purple);
   text-align: center;
-  font-size: 3em;
+  font-size: 2.25em;
   font-weight: bold;
   margin: auto;
-  padding-top: 5%;
 }
 
 .placeholder * {
@@ -322,7 +321,16 @@ h3 {
   }
   .logocontainer {
     width: 100px;
+    height: 100px;
     margin-left: 100px;
+  }
+
+  .placeholder {
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    padding-top: 5%;
+    font-size: 3em;
   }
 
   .category {
