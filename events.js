@@ -1,65 +1,7 @@
 /*import items from "./all.js";*/
 
-const items = [
-  {
-    type: 'special',
-    business: 'Sushi 365',
-    offer: '$3.65 Sushi Rolls',
-    day: 'Monday',
-    time: '5 pm - 10pm',
-  },
-  {
-    type: 'special',
-    business: 'TDs',
-    offer: '$11.95 All You Can Eat Wings',
-    day: 'Monday',
-    time: '5 pm - 9pm',
-  },
-  {
-    type: 'special',
-    business: 'Sushi 365',
-    offer: 'Half Price Wine Bottles',
-    time: 'All Day',
-    day: 'Wednesday',
-  },
-  {
-    type: 'special',
-    business: 'Itsurwiener',
-    offer: '$6 Litcher + Taco Bar',
-    day: 'Thursday',
-    time: '4-8pm',
-    bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/37322716_697868070553651_5167770909007675392_n.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=R9lr3Ff8KV0AX_oFf1p&_nc_ht=scontent-iad3-1.xx&oh=c06437832dea7d9df5282ece1e677ba0&oe=5F0CF2FF'
-  },
+var items = items;
 
-
-  /* DIVIDE BETWEEN SPECIALS AND EVENTS */
-
-  {
-    type: 'event',
-    business: 'TDs',
-    reason: 'karaoke',
-    bizevent: 'Karaoke @ TDs',
-    day: 'Tuesday',
-    time: '10 pm',
-  },
-  {
-    type: 'event',
-    business: 'Sushi 365',
-    reason: 'trivia',
-    bizevent: 'Trivia Night (Pub Trivia)',
-    day: 'Wednesday',
-    time: '7:30 pm',
-  },
-  {
-    type: 'event',
-    business: 'Itsurwiener',
-    reason: 'trivia',
-    bizevent: 'Trivia Night (Themed Trivia)',
-    day: 'Wednesday',
-    time: '8 pm',
-    bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/37322716_697868070553651_5167770909007675392_n.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=R9lr3Ff8KV0AX_oFf1p&_nc_ht=scontent-iad3-1.xx&oh=c06437832dea7d9df5282ece1e677ba0&oe=5F0CF2FF'
-  },
-];
 
 const business = document.querySelector('.business-name');
 const bizevent = document.querySelector('.event');
