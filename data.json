@@ -18,6 +18,22 @@ var items = [
   },
   {
     type: 'special',
+    business: 'Loose Change',
+    offer: '$1 Tacos',
+    alc: false,
+    day: 'Tuesday',
+    time: 'All Day',
+  },
+  {
+    type: 'special',
+    business: 'Loose Change',
+    offer: 'Half Off Margs',
+    alc: true,
+    day: 'Tuesday',
+    time: 'All Day',
+  },
+  {
+    type: 'special',
     business: 'Sushi 365',
     offer: 'Half Price Wine Bottles',
     alc: true,
@@ -26,17 +42,41 @@ var items = [
   },
   {
     type: 'special',
+    business: 'Todaros',
+    offer: 'Dollar Slice Night',
+    alc: false,
+    day: 'Wednesday',
+    time: '6pm - Midnight',
+  },
+  {
+    type: 'special',
     business: 'Itsurwiener',
     offer: '$6 Litcher + Taco Bar',
     alc: true,
     day: 'Thursday',
-    time: '4-8pm',
+    time: '4pm - 8pm',
     bizlogo: 'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/37322716_697868070553651_5167770909007675392_n.png?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=R9lr3Ff8KV0AX_oFf1p&_nc_ht=scontent-iad3-1.xx&oh=c06437832dea7d9df5282ece1e677ba0&oe=5F0CF2FF'
+  },
+  {
+    type: 'special',
+    business: 'Esso Club',
+    offer: '55c Tenders',
+    alc: false,
+    day: 'Thursday',
+    time: '4pm - til',
   },
 
 
   /* DIVIDE BETWEEN SPECIALS AND EVENTS */
 
+  {
+    type: 'event',
+    business: 'Loose Change',
+    bizevent: 'Trivia',
+    reason: 'trivia',
+    day: 'Monday',
+    time: '8 pm',
+  },
   {
     type: 'event',
     business: 'TDs',
