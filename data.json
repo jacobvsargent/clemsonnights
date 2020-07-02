@@ -42,7 +42,7 @@ var items = [
   },
   {
     type: 'special',
-    business: 'Todaro's',
+    business: 'Todaros',
     offer: 'Dollar Slice Night',
     alc: false,
     day: 'Wednesday',
