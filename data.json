@@ -1,7 +1,7 @@
 var items = [
   {
     type: 'special',
-    business: 'Sushi 365 also it works',
+    business: 'Sushi 365',
     offer: '$3.65 Sushi Rolls',
     alc: false,
     day: 'Monday',
