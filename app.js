@@ -3,6 +3,7 @@
 var items = items;
 
 
+
 const business = document.querySelector('.business-name');
 const offer = document.querySelector('.offer');
 const day = document.querySelector('.day');
@@ -11,7 +12,7 @@ const time = document.querySelector('.time');
 const special = document.getElementById('category-list');
 
 for (i=0; i<items.length; i++) {
-if (items[i].type === 'special') {
+if (items[i].type === 'special' && items[i].alc == false) {
   const item = items[i];
 
     newSpecial = document.createElement("DIV");
