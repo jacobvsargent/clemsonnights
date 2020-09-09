@@ -39,6 +39,14 @@ var items = [
   },
   {
     type: 'special',
+    business: '4 Paws',
+    offer: '$1 Blue Moons',
+    alc: true,
+    day: 'Tuesday',
+    time: 'All Day',
+  },
+  {
+    type: 'special',
     business: 'Itsurwiener',
     offer: '75c Wings/Tenders',
     alc: false,
